@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Início</a></li>
+                <li><a href="{% url 'login_cliente' %}">Login</a></li>
+                <li><a href="{% url 'cadastro_cliente' %}">Cadastro</a></li>
+                <li><a href="{% url 'cardapio' %}">Cardápio</a></li>
+            </ul>
+        </nav>
+        <h1>Bem-vindo à nossa loja!</h1>
+    </header>
+
+    <main>
+        {% if user.is_authenticated %}
+            <p>Você já está logado!</p>
+            <p><a href="{% url 'cardapio' %}">Ir para o cardápio</a></p>
+        {% else %}
+            <p>Para começar a comprar, faça seu login ou cadastro:</p>
+            <p><a href="{% url 'login_cliente' %}">Fazer Login</a> ou <a href="{% url 'cadastro_cliente' %}">Criar Conta</a></p>
+        {% endif %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Minha Loja</p>
+    </footer>
+</body>
+</html>

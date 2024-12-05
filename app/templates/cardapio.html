@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Cardápio{% endblock %}
+
+{% block content %}
+    <h2>Escolha seus produtos</h2>
+    <div class="produtos">
+        {% for categoria in categorias %}
+            <h3>{{ categoria.nome }}</h3>
+            <ul>
+                {% for produto in categoria.produto_set.all %}
+                    <li>
+                        {{ produto.nome }} - R$ {{ produto.preco }}
+                        <a href="{% url 'adicionar_ao_carrinho' produto.id %}">Adicionar ao carrinho</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </div>
+{% endblock %}

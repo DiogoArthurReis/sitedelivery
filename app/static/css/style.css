@@ -1,0 +1,117 @@
+/* Resetando o estilo para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111; /* fundo preto */
+    color: #fff; /* texto branco */
+    line-height: 1.6;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #333; /* Cor de fundo escura */
+    padding: 15px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #fff;
+}
+
+/* Menu de navegação */
+nav {
+    background-color: #222; /* Cor de fundo do menu */
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    color: #ff5733; /* cor de destaque ao passar o mouse */
+}
+
+/* Formulário */
+form {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+form input,
+form button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #555;
+    border-radius: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    background-color: #333;
+    color: #fff;
+}
+
+form button {
+    background-color: #ff5733;
+    color: #fff;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #ff6f47;
+}
+
+/* Estilo para as mensagens de erro ou sucesso */
+.messages {
+    background-color: #ff5733;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.messages p {
+    color: #fff;
+}
+
+/* Links */
+a {
+    color: #ff5733;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #333;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}

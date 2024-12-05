@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Pedido Finalizado{% endblock %}
+
+{% block content %}
+    <h2>Pedido Finalizado</h2>
+    <p>Seu pedido foi recebido com sucesso! Você receberá em breve.</p>
+    <p>Detalhes do Pedido:</p>
+    <ul>
+        {% for item in pedido.itens.all %}
+            <li>{{ item.produto.nome }} - R$ {{ item.produto.preco }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
